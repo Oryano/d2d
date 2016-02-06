@@ -10,38 +10,6 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Dick 2 Dick  </title>
     </head>
-    <script type="text/javascript">
-        function onWindowLoad() {
-            document.addEventListener('deviceready', onDeviceReady);
-        }
-        
-     function onDeviceReady() {
-            alert("Device Ready");      
-            takePicture();
-        }   
-
-    function takePicture() {
-
-        navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
-            destinationType: Camera.DestinationType.FILE_URI
-        });
-    }
-
-    function onSuccess(imageData) {
-        var image = document.getElementById('mypicture');
-        //image.src = "data:image/jpeg;base64," + imageData;
-        console.log(imageData);
-        image.src = imageData;
-
-    }
-
-    function onFail(message) {
-        alert('Failed because: ' + message);
-    }
-        
-        window.addEventListener('load', onWindowLoad);
-        app.initialize();
-    </script>
     <body>
       
             <h1>Dick2Dick</h1>
@@ -51,9 +19,10 @@
                 </div>
             </div>
 
-            
+
 
            
+        <script type="text/javascript" src="js/index.js"></script>
 
     </body>
 </html>
